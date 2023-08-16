@@ -10,16 +10,35 @@
     --light-main: #F9FAF8;
     --light-secondary: #d0d2d6;
 
-    --gr-1: #F1F7ED;
-    --gr-2: #E0EEC6;
-    --gr-3: #7CA982;
-    --gr-4: #243E36;
+    --green-subtle: #F1F7ED;
+    --green-light: #E0EEC6;
+    --green-dark: #7CA982;
+    --green-void: #243E36;
+    --green-void-var: #24423a;
 
     --palette5-1: #C2A83E;
     --palette5-2: #AC8887;
     --palette5-3: #9A8C98;
+
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 32px;
+    --space-4: 64px;
+
+    --font-small: 12px;
+    --font-medium: 16px;
+    --font-large: 24px;
+    --font-enormous: 36px;
+
+    --font-light: 300;
+    --font-norm: 400;
+    --font-bold: 600;
+    --font-thicc: 900;
 }
 
+
+
+/* TYPES */
 html {
     font-family: "Roboto", sans-serif;
 }
@@ -29,7 +48,7 @@ ul {
 }
 
 a {
-    color: var(--gr-1);
+    color: var(--green-subtle);
     text-decoration: none;
 }
 
@@ -38,24 +57,34 @@ button {
     height: 40px;
     border-radius: 8px;
     border: 0;
-    font-weight: 500;
-    font-size: 1.15rem;
+    font-weight: var(--font-bold);
+    font-size: var(--font-medium);
 }
+/* TYPES */
 
+
+
+/* SHARED CLASSES */
 .wrapper {
     max-width: 1000px;
     margin: auto;
 }
+/* SHARED CLASSES */
 
+
+
+/* CLASSES */
+
+/* head section */
 .head-section {
-    background-color: #24423a;
-    padding: 32px clamp(32px, 5vw, 160px);
+    background-color: var(--green-void-var);
+    padding: var(--space-3) clamp(var(--space-3), 5vw, 160px);
 }
 
 .section {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: var(--space-3);
 }
 
 .header {
@@ -64,20 +93,20 @@ button {
 }
 
 .header-logo {
-    color: var(--gr-2);
+    color: var(--green-light);
     margin-right: auto;
 }
 
 .header-links {
     display: flex;
-    gap: 32px;
+    gap: var(--space-3);
 }
 
 .hero-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: var(--space-3);
     min-height: 250px;
 }
 
@@ -85,23 +114,23 @@ button {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--space-1);
 }
 
 .hero-title {
-    font-size: 48px;
-    font-weight: 900;
-    color: var(--gr-2);
+    font-size: var(--font-enormous);
+    font-weight: var(--font-thicc);
+    color: var(--green-light);
 }
 
 .hero-text {
-    font-size: 18px;
-    color: var(--gr-1);
+    font-size: var(--font-medium);
+    color: var(--green-subtle);
 }
 
 .hero-btn {
-    color: var(--gr-2);
-    background-color: var(--gr-3);
+    color: var(--green-light);
+    background-color: var(--green-dark);
 }
 
 .hero-svg {
@@ -120,37 +149,60 @@ button {
     height: auto;
     object-fit: cover;
 }
+/* head section */
+
+
+
+/* info section */
+.info-section {
+    background-color: var(--green-subtle);
+    padding: var(--space-3) 20%;
+}
 
 .info-title {
     color: var(--dark);
-    font-size: 36px;
-    font-weight: 900;
-    margin-bottom: 16px;
+    font-size: var(--font-large);
+    font-weight: var(--font-thicc);
+    margin-bottom: var(--space-2);
     text-align: center;
-}
-
-.info {
-    padding: 48px 20%;
 }
 
 .info-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 32px;
+    gap: var(--space-3);
 }
 
 .item-img {
-    border-radius: 16px;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 2px solid var(--blue);
-}
+    width: 180px;
+    height: 180px;
 
-.quote {
-    background-color: var(--light-secondary);
-    padding: 48px;
+    object-fit: cover;
+    border-image: linear-gradient(45deg, hsla(162, 27%, 19%, 1) 20%, hsla(142, 19%, 37%, 1) 50%, hsla(128, 21%, 57%, 1) 100%) 30;
+    border-width: 8px;
+    border-style: outset;
+
+    /*
+    background: hsla(162, 27%, 19%, 1);
+
+    background: linear-gradient(45deg, hsla(162, 27%, 19%, 1) 20%, hsla(142, 19%, 37%, 1) 50%, hsla(128, 21%, 57%, 1) 100%);
+
+    background: -moz-linear-gradient(45deg, hsla(162, 27%, 19%, 1) 20%, hsla(142, 19%, 37%, 1) 50%, hsla(128, 21%, 57%, 1) 100%);
+
+    background: -webkit-linear-gradient(45deg, hsla(162, 27%, 19%, 1) 20%, hsla(142, 19%, 37%, 1) 50%, hsla(128, 21%, 57%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#243E36", endColorstr="#4D705A", GradientType=1 );
+    */
+}
+/* info section */
+
+
+
+/* quote section */
+.quote-section {
+    background-color: var(--green-light);
+    padding: var(--space-3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,79 +215,71 @@ button {
 }
 
 .quote-text {
-    color: var(--dark);
-    font-size: 36px;
-    font-weight: 300;
+    color: var(--green-void-var);
+    font-size: var(--font-large);
+    font-weight: var(--font-light);
     font-style: italic;
 }
 
 .quote-author {
     align-self: flex-end;
-    color: var(--dark);
-    font-size: 16px;
-    font-weight: 900;
+    color: var(--green-void);
+    font-size: var(--font-medium);
+    font-weight: var(--font-thicc);
 }
+/* quote section */
 
-.form {
-    padding: 64px;
+
+
+/* form section */
+.form-section {
+    padding: var(--space-4);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.form-header {
-    font-size: 16px;
-    color: var(--light-main);
+.form-title {
+    font-size: var(--font-medium);
+    color: var(--green-light);
 }
 
 .form-text {
-    font-size: 12px;
-    color: var(--light-secondary);
+    font-size: var(--font-small);
+    color: var(--green-subtle);
 }
 
 .form-container {
     border-radius: 5px;
     width: 50%;
-    padding: 16px;
-    background-color: var(--blue);
+    padding: var(--space-2);
+    background-color: var(--green-void-var);
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 16px;
+    gap: var(--space-2);
 }
 
 .form-content {
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: var(--space-1);
 }
+/* form section */
 
-label {
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--light-main);
-}
 
-input {
-    display: block;
-    width: 100%;
-    height: 2.5rem;
-    margin-top: 4px;
-    border-radius: 5px;
-}
 
-button {
-    height: 2.5rem;
-    border-radius: 5px;
-}
-
-.footer {
-    color: var(--light-secondary);
-    font-size: 12px;
+/* footer section */
+.footer-section {
+    color: var(--green-light);
+    font-size: var(--font-small);
     height: 50px;
-    background-color: var(--dark);
+    background-color: var(--green-void);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* footer section */
+
+/* CLASSES */
