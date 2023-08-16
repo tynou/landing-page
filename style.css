@@ -1,42 +1,142 @@
 *, ::before, ::after {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 :root {
     --blue: #3882F6;
     --dark: #1F2937;
     --light-main: #F9FAF8;
-    --light-secondary: #E5E7EB;
+    --light-secondary: #d0d2d6;
+
+    --gr-1: #F1F7ED;
+    --gr-2: #E0EEC6;
+    --gr-3: #7CA982;
+    --gr-4: #243E36;
+
+    --palette5-1: #C2A83E;
+    --palette5-2: #AC8887;
+    --palette5-3: #9A8C98;
 }
 
 html {
     font-family: "Roboto", sans-serif;
 }
 
-body {
-    padding: 0;
-    margin: 0;
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--gr-1);
+    text-decoration: none;
+}
+
+button {
+    width: 180px;
+    height: 40px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 500;
+    font-size: 1.15rem;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.head-section {
+    background-color: #24423a;
+    padding: 32px clamp(32px, 5vw, 160px);
+}
+
+.section {
     display: flex;
     flex-direction: column;
+    gap: 32px;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+}
+
+.header-logo {
+    color: var(--gr-2);
+    margin-right: auto;
+}
+
+.header-links {
+    display: flex;
+    gap: 32px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    min-height: 250px;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--gr-2);
+}
+
+.hero-text {
+    font-size: 18px;
+    color: var(--gr-1);
+}
+
+.hero-btn {
+    color: var(--gr-2);
+    background-color: var(--gr-3);
+}
+
+.hero-svg {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    aspect-ratio: 16/9;
+    width: 400px;
+    background-image: url("./images/stacked-waves.svg");
+}
+
+.hero-img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
 }
 
 .info-title {
     color: var(--dark);
     font-size: 36px;
     font-weight: 900;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .info {
-    padding: 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    padding: 48px 20%;
 }
 
 .info-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
 }
 
@@ -65,6 +165,7 @@ body {
 .quote-text {
     color: var(--dark);
     font-size: 36px;
+    font-weight: 300;
     font-style: italic;
 }
 
