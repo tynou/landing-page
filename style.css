@@ -81,7 +81,7 @@ button {
     padding: var(--space-3) clamp(var(--space-3), 5vw, 160px);
 }
 
-.section {
+.head-section .section {
     display: flex;
     flex-direction: column;
     gap: var(--space-3);
@@ -129,7 +129,7 @@ button {
 }
 
 .hero-btn {
-    color: var(--green-light);
+    color: var(--green-void);
     background-color: var(--green-dark);
 }
 
@@ -156,15 +156,22 @@ button {
 /* info section */
 .info-section {
     background-color: var(--green-subtle);
-    padding: var(--space-3) 20%;
+    padding: var(--space-3) clamp(var(--space-3), 5vw, 160px);
+}
+
+.info-section .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2)
 }
 
 .info-title {
-    color: var(--dark);
+    color: var(--green-void);
     font-size: var(--font-large);
     font-weight: var(--font-thicc);
-    margin-bottom: var(--space-2);
-    text-align: center;
+    /*margin-bottom: var(--space-2);
+    text-align: center;*/
 }
 
 .info-container {
@@ -172,6 +179,19 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--space-3);
+}
+
+.item {
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    align-items: center;
+}
+
+.item-text {
+    color: var(--green-void);
+    text-align: center;
 }
 
 .item-img {
@@ -202,7 +222,10 @@ button {
 /* quote section */
 .quote-section {
     background-color: var(--green-light);
-    padding: var(--space-3);
+    padding: var(--space-3) clamp(var(--space-3), 5vw, 160px);
+}
+
+.quote-section .section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,7 +256,11 @@ button {
 
 /* form section */
 .form-section {
-    padding: var(--space-4);
+    background-color: var(--green-subtle);
+    padding: var(--space-4) clamp(var(--space-3), 5vw, 160px);
+}
+
+.form-section .section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,21 +276,26 @@ button {
     color: var(--green-subtle);
 }
 
+.form-btn {
+    color: var(--green-void);
+    background-color: var(--green-dark);
+    border-left: 2px solid var(--green-subtle);
+}
+
 .form-container {
     border-radius: 5px;
     width: 50%;
     padding: var(--space-2);
     background-color: var(--green-void-var);
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     gap: var(--space-2);
 }
 
-.form-content {
+.form-info {
     display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: var(--space-1);
 }
 /* form section */
