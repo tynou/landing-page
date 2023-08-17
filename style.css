@@ -131,6 +131,12 @@ button {
 .hero-btn {
     color: var(--green-void);
     background-color: var(--green-dark);
+    border: 3px solid transparent;
+    transition: 300ms ease-in;
+}
+
+.hero-btn:hover {
+    border-color: var(--green-light);
 }
 
 .hero-svg {
@@ -279,7 +285,12 @@ button {
 .form-btn {
     color: var(--green-void);
     background-color: var(--green-dark);
-    border-left: 2px solid var(--green-subtle);
+    border: 3px solid transparent;
+    transition: 300ms ease-in;
+}
+
+.form-btn:hover {
+    border-color: var(--green-light);
 }
 
 .form-container {
