@@ -208,18 +208,6 @@ button {
     border-image: linear-gradient(45deg, hsla(162, 27%, 19%, 1) 20%, hsla(142, 19%, 37%, 1) 50%, hsla(128, 21%, 57%, 1) 100%) 30;
     border-width: 8px;
     border-style: outset;
-
-    /*
-    background: hsla(162, 27%, 19%, 1);
-
-    background: linear-gradient(45deg, hsla(162, 27%, 19%, 1) 20%, hsla(142, 19%, 37%, 1) 50%, hsla(128, 21%, 57%, 1) 100%);
-
-    background: -moz-linear-gradient(45deg, hsla(162, 27%, 19%, 1) 20%, hsla(142, 19%, 37%, 1) 50%, hsla(128, 21%, 57%, 1) 100%);
-
-    background: -webkit-linear-gradient(45deg, hsla(162, 27%, 19%, 1) 20%, hsla(142, 19%, 37%, 1) 50%, hsla(128, 21%, 57%, 1) 100%);
-
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#243E36", endColorstr="#4D705A", GradientType=1 );
-    */
 }
 /* info section */
 
